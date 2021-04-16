@@ -1,6 +1,6 @@
-import { NgModule, Component } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { ErrorPageComponent } from './shared/error-page/error-page.component';
-import { Router, RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 
 const routes: Routes = [
