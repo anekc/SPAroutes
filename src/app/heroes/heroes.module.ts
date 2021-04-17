@@ -8,12 +8,17 @@ import { HeroesListComponent } from './pages/heroes-list/heroes-list.component';
 import { HeroesRoutingModule } from './heroes-routing.module';
 
 
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MaterialModule } from '../material/material.module';
+
 
 @NgModule({
   declarations: [AddComponent, SearchComponent, HeroeComponent, HeroesHomeComponent, HeroesListComponent],
   imports: [
     CommonModule,
-    HeroesRoutingModule
+    HeroesRoutingModule,
+    FlexLayoutModule,
+    MaterialModule
   ]
 })
 export class HeroesModule { }
