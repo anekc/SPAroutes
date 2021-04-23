@@ -5,6 +5,10 @@ import { Heroe } from '../../interfaces/heroes.interface';
   selector: 'app-heroe-card',
   templateUrl: './heroe-card.component.html',
   styles: [
+    `
+    mat-card{
+      margin-top: 20px;
+    }`
   ]
 })
 export class HeroeCardComponent implements OnInit {

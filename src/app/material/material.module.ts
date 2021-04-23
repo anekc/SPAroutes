@@ -7,13 +7,16 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { MatInputModule } from '@angular/material/input';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { MatFormFieldModule } from '@angular/material/form-field';
 @NgModule({
   declarations: [],
   imports: [ MatSidenavModule,  MatToolbarModule , MatCardModule, MatGridListModule
-    , MatIconModule, MatButtonModule, MatListModule, MatProgressSpinnerModule
+    , MatIconModule, MatButtonModule, MatListModule, MatProgressSpinnerModule, MatAutocompleteModule, MatFormFieldModule, MatInputModule,
   ],
   exports: [MatSidenavModule, MatToolbarModule, MatIconModule, MatButtonModule, MatListModule, MatCardModule, MatProgressSpinnerModule,
-    MatGridListModule]
+    MatGridListModule, MatAutocompleteModule , MatFormFieldModule , MatInputModule]
 })
 export class MaterialModule { }

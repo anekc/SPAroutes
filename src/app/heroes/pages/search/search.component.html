@@ -1,1 +1,15 @@
-<p>search works!</p>
+<div fxLayout="column">
+    <div>
+        <h1>Serch Heroes</h1>
+        <mat-divider></mat-divider>
+    </div>
+    <div>
+        <h3>Buscador</h3>
+        <mat-form-field class="example-full-width">
+            <input type="text" placeholder="Buscar" matInput aria-label="Number" [matAutocomplete]="auto">
+            <mat-autocomplete autoActiverFirstOption #auto="matAutocomplete">
+
+            </mat-autocomplete>
+        </mat-form-field>
+    </div>
+</div>

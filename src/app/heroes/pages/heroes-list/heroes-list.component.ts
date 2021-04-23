@@ -6,10 +6,6 @@ import { HeroesService } from '../../services/heroes.service';
   selector: 'app-heroes-list',
   templateUrl: './heroes-list.component.html',
   styles: [
-    `
-    mat-card{
-      margin-top: 20px;
-    }`
 
   ]
 })
