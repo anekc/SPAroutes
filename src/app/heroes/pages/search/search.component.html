@@ -3,13 +3,30 @@
         <h1>Serch Heroes</h1>
         <mat-divider></mat-divider>
     </div>
-    <div>
+    <div fxLayout="column">
         <h3>Buscador</h3>
+
         <mat-form-field class="example-full-width">
-            <input type="text" placeholder="Buscar" matInput aria-label="Number" [matAutocomplete]="auto">
-            <mat-autocomplete autoActiverFirstOption #auto="matAutocomplete">
+            <input type="text" placeholder="Buscar" matInput [(ngModel)]="termino" aria-label="Number" [matAutocomplete]="auto" (input)="buscando()">
+            <mat-autocomplete autoActiverFirstOption #auto="matAutocomplete" (optionSelected)="selectedOption($event)">
+                <mat-option *ngFor="let heroe of heroes " [value]="heroe">
+                    {{heroe.superhero}}
+                </mat-option>
+                <mat-option value="" *ngIf="heroes.length === 0 && termino.trim().length > 0  ">
+                    No se encontró nada con el termino {{termino}}
+                </mat-option>
 
             </mat-autocomplete>
         </mat-form-field>
     </div>
 </div>
+
+<div>
+    <div>
+        <pre> {{selectedHeroe | json}}</pre>
+    </div>
+    <div>
+        <div *ngIf="selectedHeroe">
+            <app-heroe-card [heroe]="selectedHeroe"></app-heroe-card>
+        </div>
+    </div>

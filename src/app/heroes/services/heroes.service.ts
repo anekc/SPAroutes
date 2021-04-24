@@ -11,11 +11,15 @@ export class HeroesService {
   private url: string = environment.baseUrl;
   constructor(private http: HttpClient) { }
 
-  getHeroes(){
+  getHeroes(): Observable<Heroe[]>{
    return this.http.get<Heroe[]>(`${this.url}/heroes`);
   }
 
   getHeroesbyId(id: string): Observable<Heroe>{
     return this.http.get<Heroe>(`${this.url}/heroes/${id}`);
+  }
+
+  getSuggestions(termino: string): Observable<Heroe[]>{
+    return this.http.get<Heroe[]>(`${this.url}/heroes?q=${termino}&_limit=6`);
   }
 }
