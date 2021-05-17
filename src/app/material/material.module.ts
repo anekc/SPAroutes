@@ -12,13 +12,15 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
+import  {MatSnackBarModule} from '@angular/material/snack-bar'
+import  {MatDialogModule} from '@angular/material/dialog'
 @NgModule({
   declarations: [],
   imports: [ MatSidenavModule,  MatToolbarModule , MatCardModule, MatGridListModule
     , MatIconModule, MatButtonModule, MatListModule, MatProgressSpinnerModule, MatAutocompleteModule, MatFormFieldModule, MatInputModule,
-     MatSelectModule,
+     MatSelectModule,MatSnackBarModule,MatDialogModule
   ],
   exports: [MatSidenavModule, MatToolbarModule, MatIconModule, MatButtonModule, MatListModule, MatCardModule, MatProgressSpinnerModule,
-    MatGridListModule,MatSelectModule, MatAutocompleteModule , MatFormFieldModule , MatInputModule]
+    MatGridListModule,MatSelectModule, MatAutocompleteModule , MatFormFieldModule , MatInputModule, MatSnackBarModule, MatDialogModule]
 })
 export class MaterialModule { }
